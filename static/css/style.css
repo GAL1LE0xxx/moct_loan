@@ -4,19 +4,13 @@
 
 .bg-navbar {
     background-color: #215FAC;
-    opacity: 0.8;
+    /* opacity: 0.9; */
 
 }
 
 .bg-footer{
     background-color: #114380;
     color: white;
-}
-
-/* Style the navbar */
-.navbar {
-    overflow: hidden;
-    background-color: #215FAC;
 }
 
 
@@ -64,3 +58,5 @@ li a:hover {
     height: 500px;
     overflow: hidden;
   }
+
+

@@ -38,9 +38,9 @@ include("connect.php");
 				<div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
 					<div class="d-table-cell align-middle">
 						<div class="text-center mt-4">
-							<h1 class="h2">Welcome back!</h1>
+							<h1 class="h2">MCOT | LOAN</h1>
 							<p class="lead">
-								Sign in to your account to continue
+								ระบบเงินกู้สวัสดิการพนักงาน บมจ.อสมท
 							</p>
 						</div>
                         <a class="btn btn-primary mb-3" href="index.php">ย้อนกลับ</a>

@@ -24,39 +24,35 @@ include("connect.php");
 
 <body>
     <!-- header  -->
-    <div id="header">
-        <nav class="navbar navbar-expand bg-header">
-            <a href="idex.php">
-                <img class="mx-3" width="120" height="60" src="https://www.mcot.net/assets/www/svg/mcot-digital.svg" alt="logo">
+    <div class="sticky-md-top ">
+        <nav class="navbar navbar-expand-md bg-header shadow p-2 mb-3 bg-body-tertiary ">
+            <a href="index.php">
+                <img class="mx-2" width="90" height="60" src="https://www.mcot.net/assets/www/svg/mcot-digital.svg" alt="logo">
             </a>
             <span class="mx-1 text-light">ระบบกู้ยืมสวัสดิการพนักงาน บมจ.อสมท <br>MCOT LOAN SYSTEM</span>
-            <div class="ms-auto">
+            <div class="ms-auto d-flex justify-content-md-end">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="#">ข่าวสาร</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">ทดสอบ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">ทดสอบ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">ทดสอบ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-auto d-flex  justify-content-md-end">
                 <a href="admin-sign-in.php" class="btn btn-outline-light mx-3">ลงชื่อเข้าใช้</a>
             </div>
         </nav>
     </div>
 
-
     <!-- end header  -->
-
-    <!-- navbar 1 -->
-    <div class="sticky-top bg-navbar">
-        <ul class="nav justify-content-center ">
-            <li class="nav-item">
-                <a href="#">ข่าวสาร</a>
-            </li>
-            <li class="nav-item ">
-                <a href="#">ทดสอบ</a>
-            </li>
-            <li class="nav-item">
-                <a href="#">ทดสอบ</a>
-            </li>
-            <li class="nav-item">
-                <a href="#">ทดสอบ</a>
-            </li>
-        </ul>
-    </div>
-    <!-- end navbar 1 -->
 
     <div class="content">
         <div class="container-fluid">
@@ -92,20 +88,42 @@ include("connect.php");
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <!-- end slide image -->
 
+            <!-- news -->
             <div class="container mt-5">
-                <div class="row">
-                    <div class="col mt-2">
-                        <h1>Header Test 1</h1>
+                <div class="row ">
+                    <div class="col-6 mt-2 d-flex justify-content-center">
+                        <div class="row g-0 bg-body-secondary position-relative">
+                            <div class="col-md-6 mb-md-0 p-md-4">
+                                <img src="img\avatars\avatar.jpg" class="w-100" alt="...">
+                            </div>
+                            <div class="col-md-6 p-4 ps-md-0">
+                                <h5 class="mt-0">Columns with stretched link</h5>
+                                <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+                                <a href="#" class="stretched-link">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col mt-2">
-                        <h1>Header Test 2</h1>
+                    <div class="col-6 mt-2 d-flex justify-content-center">
+                        <div class="row g-0 bg-body-secondary position-relative">
+                            <div class="col-md-6 mb-md-0 p-md-4">
+                                <img src="img\avatars\avatar.jpg" class="w-100" alt="...">
+                            </div>
+                            <div class="col-md-6 p-4 ps-md-0">
+                                <h5 class="mt-0">Columns with stretched link</h5>
+                                <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+                                <a href="#" class="stretched-link">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- end news -->
+
         </div>
     </div>
-    <!-- end slide image -->
+
 
     <!-- footer -->
     <footer class="footer mt-auto py-2  bg-footer">
