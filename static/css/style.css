@@ -1,15 +1,20 @@
-
-
 .bg-header {
     background-color: #114380;
 }
 
 .bg-navbar {
     background-color: #215FAC;
+    opacity: 0.8;
+
+}
+
+.bg-footer{
+    background-color: #114380;
+    color: white;
 }
 
 /* Style the navbar */
-#navbar {
+.navbar {
     overflow: hidden;
     background-color: #215FAC;
 }
@@ -20,7 +25,7 @@ li a {
     color: #f2f2f2;
     text-align: center;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -40,11 +45,13 @@ li a:hover {
     position: fixed;
     top: 0;
     width: 100%;
+
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky+.content {
     padding-top: 10px;
+    
 }
 /* end navbar */
 
@@ -53,6 +60,7 @@ li a:hover {
   }
   
   .carousel-item {
+    position: absolute;
     height: 500px;
     overflow: hidden;
   }

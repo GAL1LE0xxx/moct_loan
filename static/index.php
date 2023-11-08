@@ -59,44 +59,62 @@ include("connect.php");
     <!-- end navbar 1 -->
 
     <div class="content">
-        <!--  slide image -->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="img\photos\unsplash-1.jpg" class="d-block w-100 h-150" alt="...">
+        <div class="container-fluid">
+
+            <!--  slide image -->
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
-                <div class="carousel-item" data-bs-interval="10000">
-                    <img src="img\photos\unsplash-2.jpg" class="d-block w-100 h-150" alt="...">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="img\photos\unsplash-1.jpg" class="d-block w-100 h-150" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="img\photos\unsplash-2.jpg" class="d-block w-100 h-150" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="img\photos\unsplash-3.jpg" class="d-block w-100 h-150" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="img\carousel\test-image.jpg" class="d-block w-100 h-150" alt="...">
+                    </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="10000">
-                    <img src="img\photos\unsplash-3.jpg" class="d-block w-100 h-150" alt="...">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col mt-2">
+                        <h1>Header Test 1</h1>
+                    </div>
+                    <div class="col mt-2">
+                        <h1>Header Test 2</h1>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <div class="mt-5">
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
-            <h1>Hello World!</h1>
         </div>
     </div>
     <!-- end slide image -->
 
-    
+    <!-- footer -->
+    <footer class="footer mt-auto py-2  bg-footer">
+        <div class="container-fluid">
+            <span>MCOT LOAN | ระบบกู้ยืมสวัสดิการพนักงาน บมจ.อสมท</span>
+        </div>
+    </footer>
+    <!-- footer -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
