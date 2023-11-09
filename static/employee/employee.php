@@ -1,3 +1,22 @@
+<?php
+session_start();
+include("../connect.php");
+if (!isset($_SESSION['username'])) {
+	header("location: ../sign-in.php"); // redirect ไปยังหน้า login.php
+}
+
+$name = $_SESSION['name'];
+$position = $_SESSION['position'];
+
+if ($position = '0'){
+	$position = "ผู้ดูแลระบบ";
+}else if ($position = '1'){
+	$position = "พนักงาน";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,18 +29,18 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="../img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 	<title>AdminKit Demo - Bootstrap 5 Admin Template</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="../css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 	<!-- sweetalert -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js"></script>
 	<!-- sweetalert -->
 </head>
 
@@ -281,7 +300,7 @@
 							</a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-								<img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+								<span class="text-dark"><?php echo $position ?></span> | <span class="text-dark"><?php echo $name ?></span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -290,7 +309,7 @@
 								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="sign-out.php">Log out</a>
+								<a class="dropdown-item" href="../sign-out.php">Log out</a>
 							</div>
 						</li>
 					</ul>
@@ -298,12 +317,11 @@
 			</nav>
 			<!-- end nav2 -->
 
-			<!-- content -->
+			<!-- content -->	
 			<main class="content">
 				<div class="container-fluid p-0">
-				<?php include "connect.php"?>
 
-					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+					<h1 class="h3 mb-3"><strong>จัดการข้อมูลผู้ใช้</strong> Dashboard</h1>
 
 
 			</main>
@@ -342,44 +360,44 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="../js/app.js"></script>
 
 	<!-- sweetalert -->
 	<script>
-        // Get the URL query parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-        const msg = urlParams.get('msg');
+		// Get the URL query parameters
+		const urlParams = new URLSearchParams(window.location.search);
+		const status = urlParams.get('status');
+		const msg = urlParams.get('msg');
 
-        // Check the status and display the SweetAlert message
-        if (status === 'success') {
-            Swal.fire({
-                title: 'เข้าสู่ระบบสำเร็จ',
-                text: msg,
-                icon: 'success',
-                confirmButtonClass: 'btn btn-primary'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redirect to order.php with success status and message
-                    const redirectURL = 'admin.php';
-                    window.location.href = redirectURL;
-                }
-            });
-        } else if (status === 'error') {
-            Swal.fire({
-                title: 'ผิดพลาด',
-                text: msg,
-                icon: 'error',
-                confirmButtonClass: 'btn btn-primary'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redirect to order.php with success status and message
-                    const redirectURL = 'admin.php';
-                    window.location.href = redirectURL;
-                }
-            });
-        }
-    </script>
+		// Check the status and display the SweetAlert message
+		if (status === 'success') {
+			Swal.fire({
+				title: 'เข้าสู่ระบบสำเร็จ',
+				text: msg,
+				icon: 'success',
+				confirmButtonClass: 'btn btn-primary'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					// Redirect to order.php with success status and message
+					const redirectURL = 'employee.php';
+					window.location.href = redirectURL;
+				}
+			});
+		} else if (status === 'error') {
+			Swal.fire({
+				title: 'ผิดพลาด',
+				text: msg,
+				icon: 'error',
+				confirmButtonClass: 'btn btn-primary'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					// Redirect to order.php with success status and message
+					const redirectURL = 'employee.php';
+					window.location.href = redirectURL;
+				}
+			});
+		}
+	</script>
 	<!-- sweetalert -->
 
 

@@ -47,7 +47,7 @@ include("connect.php");
                 </ul>
             </div>
             <div class="ms-auto d-flex  justify-content-md-end">
-                <a href="admin-sign-in.php" class="btn btn-outline-light mx-3">ลงชื่อเข้าใช้</a>
+                <a href="sign-in.php" class="btn btn-outline-light mx-3">ลงชื่อเข้าใช้</a>
             </div>
         </nav>
     </div>

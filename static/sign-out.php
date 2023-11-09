@@ -18,7 +18,7 @@ session_destroy();
             title: 'ออกจากระบบสำเร็จ',
             icon: 'success'
         }).then(function() {
-            window.location.href = 'admin-sign-in.php';
+            window.location.href = 'sign-in.php';
         });
     </script>
 

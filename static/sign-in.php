@@ -43,19 +43,19 @@ include("connect.php");
 								ระบบเงินกู้สวัสดิการพนักงาน บมจ.อสมท
 							</p>
 						</div>
-                        <a class="btn btn-primary mb-3" href="index.php">ย้อนกลับ</a>
+						<a class="btn btn-primary mb-3" href="index.php">ย้อนกลับ</a>
 
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-3">
-									<form action="admin-sign-in-db.php" method="post">
-										<div class="mb-3">
-											<label class="form-label">ชื่อผู้ใข้</label>
-											<input class="form-control form-control-lg" type="username" name="username" placeholder="กรุณากรอกชื่อผู้ใช้" />
+									<form action="sign-in-db.php" method="post">
+										<div class="form-floating mb-3">
+											<input type="username" class="form-control" id="username" name="username" placeholder="username" require>
+											<label for="username">ชื่อผู้ใข้</label>
 										</div>
-										<div class="mb-3">
-											<label class="form-label">รหัสผ่าน</label>
-											<input class="form-control form-control-lg" type="password" name="password" placeholder="กรุณากรอกรหัสผ่าน" />
+										<div class="form-floating">
+											<input type="password" class="form-control" id="password" name="password" placeholder="password" require>
+											<label for="password">รหัสผ่าน</label>
 										</div>
 										<div class="form-group mt-3">
 											<button type="submit" name="login_user" class="form-control btn btn-primary btn-lg submit px-3">เข้าสู่ระบบ</button>
@@ -91,20 +91,20 @@ include("connect.php");
 			}).then((result) => {
 				if (result.isConfirmed) {
 					// Redirect to order.php with success status and message
-					const redirectURL = 'admin-sign-in.php';
+					const redirectURL = 'sign-in.php';
 					window.location.href = redirectURL;
 				}
 			});
 		} else if (status === 'error') {
 			Swal.fire({
-				title: 'ผิดพลาด',
+				title: 'ไม่สามารถเข้าสู่ระบบได้',
 				text: msg,
 				icon: 'error',
 				confirmButtonClass: 'btn btn-primary'
 			}).then((result) => {
 				if (result.isConfirmed) {
 					// Redirect to order.php with success status and message
-					const redirectURL = 'admin-sign-in.php';
+					const redirectURL = 'sign-in.php';
 					window.location.href = redirectURL;
 				}
 			});
