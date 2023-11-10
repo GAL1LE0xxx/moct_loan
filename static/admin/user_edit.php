@@ -70,16 +70,27 @@ if ($position != '0') {
         <!-- content -->
         <main class="content">
             <div class="container-fluid p-0">
-                <h1 class="h3 mb-3"><strong>เพิ่มข้อมูล</strong> | ผู้ใช้</h1>
+                <h1 class="h3 mb-3"><strong>แก้ไขข้อมูล</strong> | ผู้ใช้</h1>
             </div>
             <div class="card flex-fill">
                 <div class="card-body">
                     <div class="m-sm-4">
-                        <form action="useradd_db.php" method="post" class="needs-validation" novalidate="">
+                        <form action="useredit_db.php" method="post" class="needs-validation" novalidate="">
+                            <?php
+                            if (isset($_GET['id'])) {
+                                $id = $_GET['id'];
+                                $sql = "SELECT * FROM user WHERE u_id = '$id'";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                $username = $row['u_username'];
+                                $name = $row['u_name'];
+                                $position = $row['u_position'];
+                            } ?>
                             <div class="row g-3">
+                                <input type="hidden" class="form-control " name="id" value="<?php echo $id ?>" readonly>
                                 <div class="col-sm-6">
                                     <label for="username" class="form-label">ชื่อผู้ใช้ :</label>
-                                    <input type="text" class="form-control" name="username" placeholder="กรุณากรอกชื่อผู้ใช้" value="" required="">
+                                    <input type="text" class="form-control" name="username" placeholder="กรุณากรอกชื่อผู้ใช้" value="<?php echo $username ?>" required="">
                                     <div class="invalid-feedback">
                                         กรุณากรอกชื่อผู้ใช้
                                     </div>
@@ -87,12 +98,12 @@ if ($position != '0') {
 
                                 <div class="col-sm-6">
                                     <label for="name" class="form-label">ชื่อ-สกุล :</label>
-                                    <input type="text" class="form-control" name="name" placeholder="กรุณากรอกชื่อ-สกุล" value="" required="">
+                                    <input type="text" class="form-control" name="name" placeholder="กรุณากรอกชื่อ-สกุล" value="<?php echo $name ?>" required="">
                                     <div class="invalid-feedback">
                                         กรุณากรอกชื่อ-สกุล
                                     </div>
                                 </div>
-
+<!-- 
                                 <div class="col-sm-6">
                                     <label for="password" class="form-label">รหัสผ่าน :</label>
                                     <input type="password" class="form-control" id="password" name="password" placeholder="กรุณากรอกรหัสผ่าน" value="" required="">
@@ -107,11 +118,11 @@ if ($position != '0') {
                                     <div class="invalid-feedback">
                                         กรุณายืนยันรหัสผ่าน
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="col-md-5">
                                     <label for="position" class="form-label">ตำแหน่ง :</label>
-                                    <select class="form-select" name="position" required="">
+                                    <select class="form-select" name="position" value="" required="">
                                         <option disabled selected>กรุณาเลือกตำแหน่ง</option>
                                         <option value="0">ผู้ดูแลระบบ</option>
                                         <option value="1">พนักงาน</option>
@@ -123,7 +134,7 @@ if ($position != '0') {
 
 
                                 <div class="mt-4">
-                                    <button type="submit" name="useradd" class="btn btn-lg btn-success">ยืนยัน</button>
+                                    <button type="submit" name="useredit" class="btn btn-lg btn-success">ยืนยัน</button>
                                     <a class='btn btn-lg btn-danger' href='user.php'>ย้อนกลับ</a>
                                 </div>
                         </form>

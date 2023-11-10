@@ -13,7 +13,7 @@ include("connect.php");
     <link rel="shortcut icon" href="https://www.mcot.net/assets/www/svg/mcot-digital.svg" />
     <!-- icon -->
 
-    <title>MCOT LOAN | ระบบกู้ยืมสวัสดิการสำหรับพนักงาน บมจ. อสมท</title>
+    <title>MCOT LOAN | ระบบกู้ยืมเงินสวัสดิการสำหรับพนักงาน บมจ. อสมท</title>
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
@@ -29,7 +29,7 @@ include("connect.php");
             <a href="index.php">
                 <img class="mx-2" width="90" height="60" src="https://www.mcot.net/assets/www/svg/mcot-digital.svg" alt="logo">
             </a>
-            <span class="mx-1 text-light">ระบบกู้ยืมสวัสดิการพนักงาน บมจ.อสมท <br>MCOT LOAN SYSTEM</span>
+            <span class="mx-1 text-light">ระบบกู้ยืมเงินสวัสดิการพนักงาน บมจ.อสมท <br>MCOT LOAN SYSTEM</span>
             <div class="ms-auto d-flex justify-content-md-end">
                 <ul class="nav">
                     <li class="nav-item">

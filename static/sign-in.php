@@ -64,9 +64,7 @@ include("connect.php");
 								</div>
 							</div>
 						</div>
-						<div class="text-center mb-3">
-							ไม่มีบัญชีผู้ใช้ใช่หรือไม่ ? <a href="pages-sign-up.html">สมัครสมาชิก</a>
-						</div>
+					
 					</div>
 				</div>
 			</div>

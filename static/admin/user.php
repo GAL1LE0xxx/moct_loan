@@ -194,7 +194,7 @@ if ($position != '0') {
 		// Check the status and display the SweetAlert message
 		if (status === 'success') {
 			Swal.fire({
-				title: 'เข้าสู่ระบบสำเร็จ',
+				title: msg,
 				text: msg,
 				icon: 'success',
 				confirmButtonClass: 'btn btn-primary'
@@ -207,7 +207,7 @@ if ($position != '0') {
 			});
 		} else if (status === 'error') {
 			Swal.fire({
-				title: 'ผิดพลาด',
+				title: msg,
 				text: msg,
 				icon: 'error',
 				confirmButtonClass: 'btn btn-primary'
